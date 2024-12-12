@@ -339,10 +339,15 @@ function renderClubTA(data) {
   `;
 }
 
-function renderBrogramadores(data) {
+export function renderBrogramadores(data) {
   const container = document.getElementById("Brogramadores");
-  // Personalizar por el equipo correspondiente
-  container.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+  container.innerHTML = `
+    <div class="flex flex-col mt-2 bg-white p-4 rounded-lg">
+        <p class="voltaje">Voltaje medido: ${data.voltaje}</p>
+        <p class="destornilladores">Destornilladores con bajo voltaje: ${data.D_pocoV}</p>
+        <p class="destornilladores">Destornilladores con alto voltaje: ${data.D_altoV}</p>
+    </div>
+  `;
 }
 
 const FETCH_INTERVAL_MS = 500;
