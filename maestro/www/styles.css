@@ -76,3 +76,10 @@ details:not([open]) .terminal-data {
   color: black;
   text-align: center;
 }
+.voltaje {
+  color: green; /* El voltaje en verde */
+}
+
+.destornilladores {
+  color: red; /* Los destornilladores en rojo */
+}
